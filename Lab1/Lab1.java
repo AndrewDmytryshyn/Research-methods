@@ -62,11 +62,28 @@ public class Lab1 {
                     + x3[i] + " * " + a[3] + " = " + Y[i] + ";  Xn1 = " + xn1[i] + "; Xn2 = " + xn2[i] + "; Xn3 = " + xn3[i]);
 
         }
+
+        double sumY = 0;
+        for (int i = 0; i < Y.length; i++) {
+            sumY += Y[i];
+        }
+
+        double Yaverage = sumY / Y.length;
+
+        double var216 = Yaverage * 2;// задано таке значення для того щоб пошук виконувався коректно а саме умова Y[i]<var216
+        for (int i = 1; i < Y.length; i++) {
+            if ((Y[i] > Yaverage) && (Y[i] < var216)) {
+                var216 = Y[i];
+            }
+        }
         System.out.println("\nx01 = " + x01 + "; x02 = " + x02 + "; x03 = " + x03);
         System.out.println("\nxd1 = " + xd1 + "; xd2 = " + xd2 + "; xd3 = " + xd3);
         System.out.println("\na[0] + x01 * a[1] + x02 * a[2] + x03 * a[3] = Yet");
         System.out.println(a[0] + " + " + x01 + " * " + a[1] + " + " + x02 + " * " + a[2] + " + " + x03 + " * " + a[3] + " = " + Yet);
         System.out.println("\nmin(Y[i]-Yet)^2 = " + minvar);
+        System.out.println("\nAdditional task");
+        System.out.println("\nYaverage = " + Yaverage);
+        System.out.println("\nY ← " + var216);
 
 
     }
