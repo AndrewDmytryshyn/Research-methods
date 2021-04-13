@@ -69,7 +69,7 @@ public class Lab4 {
 
     {
         System.out.println("Неоднорідна дисперсія");
-        lab4(m+1);
+        System.exit(1337);
     }
 
     double yavr[] = {avarege(y[0]), avarege(y[1]), avarege(y[2]), avarege(y[3]), avarege(y[4]), avarege(y[5]), avarege(y[6]), avarege(y[7])};
@@ -156,8 +156,9 @@ public class Lab4 {
 
     {
         System.out.println("Fp=" + Fp + " Ft=" + Fisher[8 - n - 1] + " рівняння регресії адекватно оригіналу при рівні значимості 0.05");
-    } else
-            System.out.println("Fp="+Fp +" Ft="+Fisher[8-n -1]+" рівняння регресії неадекватно оригіналу при рівні значимості 0.05");
+    } else {
+            System.out.println("Fp=" + Fp + " Ft=" + Fisher[8 - n - 1] + " рівняння регресії неадекватно оригіналу при рівні значимості 0.05");
+        lab4(m+1);}
 
 }
     public static void main(String[]args){
