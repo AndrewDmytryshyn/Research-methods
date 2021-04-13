@@ -158,7 +158,7 @@ public class Lab4 {
         System.out.println("Fp=" + Fp + " Ft=" + Fisher[8 - n - 1] + " рівняння регресії адекватно оригіналу при рівні значимості 0.05");
     } else {
             System.out.println("Fp=" + Fp + " Ft=" + Fisher[8 - n - 1] + " рівняння регресії неадекватно оригіналу при рівні значимості 0.05");
-        lab4(m+1);}
+            lab4(m+1);}
 
 }
     public static void main(String[]args){
