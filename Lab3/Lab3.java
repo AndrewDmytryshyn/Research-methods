@@ -132,6 +132,8 @@ public class Lab3 {
         //f3 = (m-1)*N= 2*4=8  tтабл = 2.306
         String k ="";
         int n = 0;
+        
+        long startTime = System.nanoTime();
         for (int i = 0; i < t.length; i++) {
             if(t[i]<2.306){
                 k+="b"+i+" ";
@@ -139,7 +141,7 @@ public class Lab3 {
                 bmat[i]=0;
             }
         }
-
+        long endTime = System.nanoTime();
         double ys1=bmat[0]+bmat[1]*xm[0][0]+bmat[2]*xm[1][0]+bmat[3]*xm[2][0];
         double ys2=bmat[0]+bmat[1]*xm[0][1]+bmat[2]*xm[1][1]+bmat[3]*xm[2][1];
         double ys3=bmat[0]+bmat[1]*xm[0][2]+bmat[2]*xm[1][2]+bmat[3]*xm[2][2];
@@ -164,6 +166,7 @@ public class Lab3 {
             System.out.println("Fp="+Fp+" Ft="+Fisher[4-n-1]+" рівняння регресії адекватно оригіналу при рівні значимості 0.05");
         }
         else System.out.println("Fp="+Fp+" Ft="+Fisher[4-n-1]+" рівняння регресії неадекватно оригіналу при рівні значимості 0.05");
+        System.out.println("Час пошуку значимих коефіцієнтів:" + (endTime - startTime)+" наносекунд");
     }
 
 
