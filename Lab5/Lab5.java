@@ -158,6 +158,7 @@ public class Lab5 {
         int n = 0;
         String k = "";
         double bmat[] = {b[0][0], b[1][0], b[2][0], b[3][0], b[4][0], b[5][0], b[6][0], b[7][0], b[8][0], b[9][0], b[10][0]};
+        double bn[] = {b[0][0], b[1][0], b[2][0], b[3][0], b[4][0], b[5][0], b[6][0], b[7][0], b[8][0], b[9][0], b[10][0]};
         for (int i = 0;
              i < t.length; i++) {
             if (t[i] < 2.042) {
@@ -165,6 +166,7 @@ public class Lab5 {
                 n += 1;
                 bmat[i] = 0;
             }
+            else bn[i]= 0;
         }
         double[] ys = new double[15];
         for (int i = 0; i < ys.length; i++) {
@@ -213,6 +215,9 @@ public class Lab5 {
             System.out.println("Fp=" + Fp + " Ft=" + Fisher[11 - n - 1] + " рівняння регресії адекватно оригіналу при рівні значимості 0.05");
         }
         else System.out.println("Fp=" + Fp + " Ft=" + Fisher[11 - n - 1] + " рівняння регресії неадекватно оригіналу при рівні значимості 0.05");
+        System.out.println("Вигляд рівняння з незначними коефіцієнтами: "+bn[0]+"+x1*"+bn[1]+"+x2*"+bn[2]+"+x3*"+bn[3]+"+x1*x2*"
+                +bn[4]+"+x1*x3*"+bn[5]+"+x2*x3*"+bn[6]+"+x1*x2*x3*"+bn[7]+"+x1^2*"+bn[8]+"+x2^2*"+bn[9]+"+x3^2*"+bn[10]);
+    
     }
 
 }
